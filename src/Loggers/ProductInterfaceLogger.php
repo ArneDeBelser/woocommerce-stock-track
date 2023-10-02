@@ -9,7 +9,7 @@ class ProductInterfaceLogger extends AbstractLogger implements StockChangeLogger
 {
     const SOURCE = 'Product Interface';
 
-    public function log($product, $user, $productType, $parentID, $postId, $orderId = null)
+    public function log($product, $user, $productType, $parentID, $postId, $oldStockQty, $orderId = null): void
     {
         $stringProduct = print_r($product, true);
         $trimmed_product = preg_replace('/\s*\R\s*/', ' ', trim($stringProduct));

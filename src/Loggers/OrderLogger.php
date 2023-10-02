@@ -9,28 +9,19 @@ class OrderLogger extends AbstractLogger implements StockChangeLoggerInterface
 {
     const SOURCE = 'Order';
 
-    private $oldStockQty = 0;
-
-    public function log($product, $user, $productType, $parentID, $postId, $orderId = null)
+    public function log($product, $user, $productType, $parentID, $postId, $oldStockQty, $orderId = null): void
     {
-        add_action('woocommerce_variation_before_set_stock', [$this, 'setOldStock'], 10, 1);
-
         $new_stock_quantity = $product->get_stock_quantity();
 
         $this->database->insert(
             $user->get('nickname'),
             self::SOURCE,
             $postId,
-            $this->oldStockQty,
+            $oldStockQty,
             $new_stock_quantity,
             $productType,
             $parentID,
             null
         );
-    }
-
-    public function setOldStock($product): void
-    {
-        $this->oldStockQty = $product->get_stock_quantity();
     }
 }
