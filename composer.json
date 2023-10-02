@@ -19,7 +19,9 @@
     ],
     "require": {
         "php": ">=7.0",
-        "composer/installers": "^1.9"
+        "composer/installers": "^1.9",
+        "larapack/dd": "^1.1",
+        "monolog/monolog": "^3.4"
     },
     "autoload": {
         "psr-4": {
