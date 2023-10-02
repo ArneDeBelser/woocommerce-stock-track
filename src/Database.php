@@ -2,7 +2,9 @@
 
 namespace ADB\WooCommerceStockTrack;
 
-class Database
+use ADB\WooCommerceStockTrack\DatabaseInterface;
+
+class Database implements DatabaseInterface
 {
     private $wpdb;
 
