@@ -18,7 +18,7 @@ The **WooCommerce Stock Track** plugin is designed to help you monitor and manag
 
 To install the WooCommerce Stock Track plugin, follow these steps:
 
-1. Download the plugin ZIP file from the [WordPress Plugin Repository](https://wordpress.org/plugins/woocommerce-stock-track/).
+1. Download the plugin ZIP file from the [Github](https://github.com/ArneDeBelser/woocommerce-stock-track/archive/refs/heads/main.zip).
 
 2. Log in to your WordPress admin dashboard.
 
@@ -48,7 +48,7 @@ The "Stock Change History" table includes the following columns:
 
 - **Executed**: The date and time when the stock change occurred.
 - **User/Order**: The user or order responsible for the change.
-- **Source**: The source of the stock change (e.g., Stock Manager, Product Interface, or Order).
+- **Source**: The source of the stock change (e.g., Product Interface, or Order).
 - **Old Stock Value**: The previous stock quantity before the change.
 - **New Stock Value**: The new stock quantity after the change.
 
