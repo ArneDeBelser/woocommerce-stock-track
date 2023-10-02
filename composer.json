@@ -1,0 +1,44 @@
+{
+    "name": "adb/woocommerce-stock-track",
+    "type": "wordpress-plugin",
+    "description": "This plugin helps you monitor and manage changes to stock levels for your WooCommerce products.",
+    "keywords": [
+        "woocommerce",
+        "plugin",
+        "stock",
+        "inventory"
+    ],
+    "homepage": "https://arnedebelser.be/",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Arne De Belser",
+            "email": "arne@arnedebelser.be",
+            "homepage": "https://arnedebelser.be/"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "composer/installers": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "ADB\\WooCommerceStockTrack\\": "src/"
+        }
+    },
+    "extra": {
+        "wordpress-plugin": {
+            "name": "woocommerce-stock-track",
+            "version": "1.0.0",
+            "slug": "woocommerce-stock-track"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.3"
+    }
+}
