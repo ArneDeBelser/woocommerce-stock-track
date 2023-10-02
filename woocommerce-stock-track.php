@@ -28,11 +28,14 @@ use ADB\WooCommerceStockTrack\Plugin;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-if (!function_exists('dd')) {
-    function dd($var)
+if (!function_exists('write_log')) {
+    function write_log($log)
     {
-        dump($var);
-        die();
+        if (is_array($log) || is_object($log)) {
+            error_log(print_r($log, true));
+        } else {
+            error_log($log);
+        }
     }
 }
 
